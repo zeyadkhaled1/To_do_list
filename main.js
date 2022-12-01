@@ -19,6 +19,8 @@ submit.onclick = function () {
         addDatatoLocalStorage(arrayoftasks) //add Tasks to Local Storage
         input.value = "";
         addelementstopagefrom(arrayoftasks);
+        let audio = document.querySelector("#audio");
+        audio.play();
     }
 }
 
@@ -43,6 +45,8 @@ tasksDiv.addEventListener("click", function (e) {
             let icon = document.createElement("img");
             icon.src = "check.png";
             e.target.prepend(icon);
+            let audio = document.querySelector("audio");
+            audio.play();
         }
         else if (e.target.children[1] !== null) {
             e.target.children[0].classList.add("hide");
@@ -50,6 +54,7 @@ tasksDiv.addEventListener("click", function (e) {
                 e.target.children[0].remove();
             }, 400)
         }
+
     }
 });
 
