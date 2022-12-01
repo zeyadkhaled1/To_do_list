@@ -50,6 +50,8 @@ tasksDiv.addEventListener("click", function (e) {
         }
         else if (e.target.children[1] !== null) {
             e.target.children[0].classList.add("hide");
+            let audio = document.querySelector("#lol");
+            audio.play();
             setTimeout(function () {
                 e.target.children[0].remove();
             }, 400)
